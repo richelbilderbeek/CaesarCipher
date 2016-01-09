@@ -1,12 +1,12 @@
-include(../../WebApplication.pri)
-include(../../Libraries/BoostAll.pri)
-include(../../Libraries/Wt.pri)
-include(../../Libraries/GeneralConsole.pri)
-include(../../Libraries/GeneralWeb.pri)
+include(../RibiLibraries/WebApplication.pri)
+include(../RibiLibraries/BoostAll.pri)
+include(../RibiLibraries/Wt.pri)
+include(../RibiLibraries/GeneralConsole.pri)
+include(../RibiLibraries/GeneralWeb.pri)
 
 
-include(../../Classes/CppCaesarCipher/CppCaesarCipher.pri)
-include(../../Classes/CppLoopReader/CppLoopReader.pri)
-include(ToolCaesarCipherWebsite.pri)
+include(../RibiClasses/CppCaesarCipher/CppCaesarCipher.pri)
+include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
+include(CaesarCipherWebsite.pri)
 
 SOURCES += wtmain.cpp

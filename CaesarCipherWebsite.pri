@@ -1,9 +1,9 @@
-include(../../Tools/ToolCaesarCipher/ToolCaesarCipherConsole.pri)
+include(../CaesarCipher/CaesarCipherConsole.pri)
 
 SOURCES += \
-    ../../Tools/ToolCaesarCipher/wtcaesarciphermenudialog.cpp \
-    ../../Tools/ToolCaesarCipher/wtcaesarciphermaindialog.cpp
+    ../CaesarCipher/wtcaesarciphermenudialog.cpp \
+    ../CaesarCipher/wtcaesarciphermaindialog.cpp
 
 HEADERS += \
-    ../../Tools/ToolCaesarCipher/wtcaesarciphermenudialog.h \
-    ../../Tools/ToolCaesarCipher/wtcaesarciphermaindialog.h
+    ../CaesarCipher/wtcaesarciphermenudialog.h \
+    ../CaesarCipher/wtcaesarciphermaindialog.h
