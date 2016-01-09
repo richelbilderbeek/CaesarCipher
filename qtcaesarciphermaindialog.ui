@@ -14,7 +14,7 @@
    <string>CaesarCipher</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="CaesarCipher.qrc">
     <normaloff>:/images/CaesarCipherArrowDown16x16.png</normaloff>:/images/CaesarCipherArrowDown16x16.png</iconset>
   </property>
   <property name="styleSheet">
@@ -30,7 +30,7 @@ QWidget { font: 18px bold &quot;Courier New&quot;, courier, monospace }</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolCaesarCipher.qrc">:/images/ToolCaesarCipherArrowUp34x34.png</pixmap>
+      <pixmap resource="CaesarCipher.qrc">:/images/CaesarCipherArrowUp34x34.png</pixmap>
      </property>
     </widget>
    </item>
@@ -64,7 +64,7 @@ QWidget { font: 18px bold &quot;Courier New&quot;, courier, monospace }</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolCaesarCipher.qrc">:/images/ToolCaesarCipherArrowDown34x34.png</pixmap>
+      <pixmap resource="CaesarCipher.qrc">:/images/CaesarCipherArrowDown34x34.png</pixmap>
      </property>
     </widget>
    </item>
@@ -89,7 +89,7 @@ QWidget { font: 18px bold &quot;Courier New&quot;, courier, monospace }</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="ToolCaesarCipher.qrc"/>
+  <include location="CaesarCipher.qrc"/>
  </resources>
  <connections/>
 </ui>

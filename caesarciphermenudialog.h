@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 /*
 CaesarCipher, Caesar cipher tool
-Copyright (C) 2014-2015 Richel Bilderbeek
+Copyright (C) 2014-2016 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -26,7 +26,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "about.h"
 #include "help.h"
 #include "menudialog.h"
-#include "richelbilderbeekprogram.h"
 
 namespace ribi {
 
@@ -34,7 +33,6 @@ struct CaesarCipherMenuDialog final : public MenuDialog
 {
   About GetAbout() const noexcept override;
   Help GetHelp() const noexcept override;
-  boost::shared_ptr<const Program> GetProgram() const noexcept override;
   std::string GetVersion() const noexcept override;
   std::vector<std::string> GetVersionHistory() const noexcept override;
 

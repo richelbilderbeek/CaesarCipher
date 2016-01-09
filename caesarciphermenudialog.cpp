@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 /*
 CaesarCipher, Caesar cipher tool
-Copyright (C) 2014-2015 Richel Bilderbeek
+Copyright (C) 2014-2016 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -143,24 +143,18 @@ ribi::Help ribi::CaesarCipherMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::CaesarCipherMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const ribi::Program> p(new ProgramCaesarCipher);
-  assert(p);
-  return p;
-
-}
 
 std::string ribi::CaesarCipherMenuDialog::GetVersion() const noexcept
 {
-  return "1.1";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::CaesarCipherMenuDialog::GetVersionHistory() const noexcept
 {
   return {
     "2014-04-01: Version 1.0: initial version, copied from CaesarCipher",
-    "2015-04-28: Version 1.1: added nice menu screen to desktop version"
+    "2015-04-28: Version 1.1: added nice menu screen to desktop version",
+    "2016-01-09: Version 2.0: moved to own GitHub",
   };
 }
 

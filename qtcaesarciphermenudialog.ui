@@ -19,7 +19,7 @@
    <string>CaesarCipher</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="CaesarCipher.qrc">
     <normaloff>:/images/CaesarCipherArrowUp16x16.png</normaloff>:/images/CaesarCipherArrowUp16x16.png</iconset>
   </property>
   <property name="styleSheet">
@@ -67,7 +67,7 @@ QPushButton { font: 48px bold &quot;Courier New&quot;, courier, monospace }</str
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolCaesarCipher.qrc">:/images/ToolCeasarCipherWelcome2.png</pixmap>
+      <pixmap resource="CaesarCipher.qrc">:/images/CeasarCipherWelcome2.png</pixmap>
      </property>
     </widget>
    </item>
@@ -79,7 +79,7 @@ QPushButton { font: 48px bold &quot;Courier New&quot;, courier, monospace }</str
   <tabstop>button_quit</tabstop>
  </tabstops>
  <resources>
-  <include location="ToolCaesarCipher.qrc"/>
+  <include location="CaesarCipher.qrc"/>
  </resources>
  <connections/>
 </ui>
