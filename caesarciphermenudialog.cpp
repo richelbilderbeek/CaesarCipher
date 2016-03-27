@@ -99,7 +99,7 @@ int ribi::CaesarCipherMenuDialog::ExecuteSpecific(const std::vector<std::string>
       return 0;
     }
   }
-  std::cout << GetHelp() << '\n';
+  std::cout << "Unknown control flow" << '\n';
   return 1;
 }
 

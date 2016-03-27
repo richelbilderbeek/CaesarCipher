@@ -42,7 +42,6 @@ public:
   QtCaesarCipherMenuDialog& operator=(const QtCaesarCipherMenuDialog&) = delete;
   ~QtCaesarCipherMenuDialog() noexcept;
 
-protected:
   void keyPressEvent(QKeyEvent * event) noexcept;
 
 private:

@@ -24,9 +24,19 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 BOOST_AUTO_TEST_CASE(ribi_caesarcipher_menudialog_test)
 {
   ribi::CaesarCipherMenuDialog d;
-  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "0", "--text", "HELLOWORLD", "-s" } ) );
-  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "1", "--text", "HELLOWORLD", "-s" } ) );
-  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "2", "--text", "HELLOWORLD", "-s" } ) );
-  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "123", "--cipher", "HELLOWORLD", "-s" } ) );
+  //Correct runs
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "-k", "0", "--text", "HELLOWORLD", "-s" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "-k", "1", "--text", "HELLOWORLD", "-s" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "-k", "2", "--text", "HELLOWORLD", "-s" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "-k", "123", "--cipher", "HELLOWORLD", "-s" } ), 0);
 
+  //Informative runs
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "--help" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "--history" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "--license" } ), 0);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "--version" } ), 0);
+
+  //Incorrect runs
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher" } ), 1);
+  BOOST_CHECK_EQUAL(d.Execute( {"CaesarCipher", "-k", "no_number", "--text", "HELLOWORLD", "-s" } ), 1);
 }
