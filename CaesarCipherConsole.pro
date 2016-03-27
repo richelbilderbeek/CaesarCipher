@@ -7,3 +7,6 @@ include(../RibiClasses/CppCaesarCipher/CppCaesarCipher.pri)
 include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
 
 SOURCES += main.cpp
+
+# QResources give this error
+QMAKE_CXXFLAGS += -Wno-unused-variable

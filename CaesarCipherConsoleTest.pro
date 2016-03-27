@@ -11,3 +11,6 @@ include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
 SOURCES += main_test.cpp
 
 LIBS += -lboost_unit_test_framework
+
+# QResources give this error
+QMAKE_CXXFLAGS += -Wno-unused-variable

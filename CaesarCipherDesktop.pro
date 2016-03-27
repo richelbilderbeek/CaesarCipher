@@ -8,3 +8,6 @@ include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
 include(CaesarCipherDesktop.pri)
 
 SOURCES += qtmain.cpp
+
+# QResources give this error
+QMAKE_CXXFLAGS += -Wno-unused-variable
