@@ -18,28 +18,15 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 //From http://www.richelbilderbeek.nl/ToolCaesarCipher.htm
 //---------------------------------------------------------------------------
-#ifndef CAESARCIPHERMENUDIALOG_H
-#define CAESARCIPHERMENUDIALOG_H
+#include "caesarciphermenudialog.h"
+#include <boost/test/unit_test.hpp>
 
-#include <string>
-#include <vector>
-#include "about.h"
-#include "help.h"
-#include "menudialog.h"
-
-namespace ribi {
-
-struct CaesarCipherMenuDialog final : public MenuDialog
+BOOST_AUTO_TEST_CASE(ribi_caesarcipher_menudialog_test)
 {
-  About GetAbout() const noexcept override;
-  Help GetHelp() const noexcept override;
-  std::string GetVersion() const noexcept override;
-  std::vector<std::string> GetVersionHistory() const noexcept override;
+  ribi::CaesarCipherMenuDialog d;
+  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "0", "--text", "HELLOWORLD", "-s" } ) );
+  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "1", "--text", "HELLOWORLD", "-s" } ) );
+  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "2", "--text", "HELLOWORLD", "-s" } ) );
+  BOOST_CHECK_NO_THROW(d.Execute( {"CaesarCipher", "-k", "123", "--cipher", "HELLOWORLD", "-s" } ) );
 
-  private:
-  int ExecuteSpecific(const std::vector<std::string>& argv) noexcept override;
-};
-
-} //~namespace ribi
-
-#endif // CAESARCIPHERMENUDIALOG_H
+}

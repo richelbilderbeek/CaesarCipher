@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 /*
 CaesarCipher, Caesar cipher tool
-Copyright (C) 2014-2016 Richel Bilderbeek
+Copyright (C) 2014-2014 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,28 +18,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 //From http://www.richelbilderbeek.nl/ToolCaesarCipher.htm
 //---------------------------------------------------------------------------
-#ifndef CAESARCIPHERMENUDIALOG_H
-#define CAESARCIPHERMENUDIALOG_H
+#include <fstream>
 
-#include <string>
-#include <vector>
-#include "about.h"
-#include "help.h"
-#include "menudialog.h"
-
-namespace ribi {
-
-struct CaesarCipherMenuDialog final : public MenuDialog
-{
-  About GetAbout() const noexcept override;
-  Help GetHelp() const noexcept override;
-  std::string GetVersion() const noexcept override;
-  std::vector<std::string> GetVersionHistory() const noexcept override;
-
-  private:
-  int ExecuteSpecific(const std::vector<std::string>& argv) noexcept override;
-};
-
-} //~namespace ribi
-
-#endif // CAESARCIPHERMENUDIALOG_H
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MODULE caesarcipher_test_module
+#include <boost/test/unit_test.hpp>

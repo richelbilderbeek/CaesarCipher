@@ -18,28 +18,19 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 //From http://www.richelbilderbeek.nl/ToolCaesarCipher.htm
 //---------------------------------------------------------------------------
-#ifndef CAESARCIPHERMENUDIALOG_H
-#define CAESARCIPHERMENUDIALOG_H
+#include "caesarciphermaindialog.h"
+#include <boost/test/unit_test.hpp>
 
-#include <string>
-#include <vector>
-#include "about.h"
-#include "help.h"
-#include "menudialog.h"
-
-namespace ribi {
-
-struct CaesarCipherMenuDialog final : public MenuDialog
+BOOST_AUTO_TEST_CASE(ribi_caesarcipher_maindialog_test)
 {
-  About GetAbout() const noexcept override;
-  Help GetHelp() const noexcept override;
-  std::string GetVersion() const noexcept override;
-  std::vector<std::string> GetVersionHistory() const noexcept override;
-
-  private:
-  int ExecuteSpecific(const std::vector<std::string>& argv) noexcept override;
-};
-
-} //~namespace ribi
-
-#endif // CAESARCIPHERMENUDIALOG_H
+  ribi::CaesarCipherMainDialog d;
+  const std::string s = "helloworld";
+  d.SetKey(123);
+  d.SetPlainText(s);
+  d.Encrypt();
+  const std::string encrypted = d.GetEncryptedText();
+  d.SetEncryptedText(encrypted);
+  d.Deencrypt();
+  const std::string deencrypted = d.GetPlainText();
+  BOOST_CHECK_EQUAL(s, deencrypted);
+}

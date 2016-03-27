@@ -55,10 +55,6 @@ private:
 private slots:
   void on_button_deencrypt_clicked() noexcept;
   void on_button_encrypt_clicked() noexcept;
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
   void on_edit_plaintext_textChanged(const QString &arg1);
   void on_edit_encrypted_text_textChanged(const QString &arg1);
 };

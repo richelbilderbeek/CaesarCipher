@@ -29,9 +29,6 @@ ribi::CaesarCipherMainDialog::CaesarCipherMainDialog(const int key) noexcept
     m_key(key),
     m_plain_text{}
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
 }
 
 void ribi::CaesarCipherMainDialog::Deencrypt() noexcept
@@ -72,27 +69,3 @@ void ribi::CaesarCipherMainDialog::SetPlainText(const std::string& s) noexcept
 {
   m_plain_text = s;
 }
-
-#ifndef NDEBUG
-void ribi::CaesarCipherMainDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-  {
-    CaesarCipherMainDialog d;
-    const std::string s = "helloworld";
-    d.SetKey(123);
-    d.SetPlainText(s);
-    d.Encrypt();
-    const std::string encrypted = d.GetEncryptedText();
-    d.SetEncryptedText(encrypted);
-    d.Deencrypt();
-    const std::string deencrypted = d.GetPlainText();
-    assert(s == deencrypted);
-  }
-}
-#endif

@@ -44,9 +44,6 @@ ribi::QtCaesarCipherMainDialog::QtCaesarCipherMainDialog(QWidget *parent) noexce
     ui(new Ui::QtCaesarCipherMainDialog),
     m_dialog(new CaesarCipherMainDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 
   {
@@ -95,18 +92,6 @@ void ribi::QtCaesarCipherMainDialog::on_button_deencrypt_clicked() noexcept
     ui->edit_plaintext->setText(result.c_str());
   }
 }
-
-#ifndef NDEBUG
-void ribi::QtCaesarCipherMainDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif
 
 void ribi::QtCaesarCipherMainDialog::on_edit_plaintext_textChanged(const QString&)
 {

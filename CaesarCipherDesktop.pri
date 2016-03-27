@@ -1,13 +1,13 @@
 include(../CaesarCipher/CaesarCipherConsole.pri)
 
 SOURCES += \
-    ../CaesarCipher/qtcaesarciphermaindialog.cpp \
-    ../CaesarCipher/qtcaesarciphermenudialog.cpp
+    $$PWD/qtcaesarciphermaindialog.cpp \
+    $$PWD/qtcaesarciphermenudialog.cpp
 
 HEADERS += \
-    ../CaesarCipher/qtcaesarciphermaindialog.h \
-    ../CaesarCipher/qtcaesarciphermenudialog.h
+    $$PWD/qtcaesarciphermaindialog.h \
+    $$PWD/qtcaesarciphermenudialog.h
 
 FORMS    += \
-    ../CaesarCipher/qtcaesarciphermaindialog.ui \
-    ../CaesarCipher/qtcaesarciphermenudialog.ui
+    $$PWD/qtcaesarciphermaindialog.ui \
+    $$PWD/qtcaesarciphermenudialog.ui

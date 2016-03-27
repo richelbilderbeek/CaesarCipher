@@ -36,10 +36,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 int ribi::CaesarCipherMenuDialog::ExecuteSpecific(const std::vector<std::string>& argv) noexcept
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
-
   const int argc = static_cast<int>(argv.size());
   if (argc == 1)
   {
@@ -157,26 +153,3 @@ std::vector<std::string> ribi::CaesarCipherMenuDialog::GetVersionHistory() const
     "2016-01-09: Version 2.0: moved to own GitHub",
   };
 }
-
-#ifndef NDEBUG
-void ribi::CaesarCipherMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  {
-    CaesarCipher(42);
-    CaesarCipherMainDialog();
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-  {
-    CaesarCipherMenuDialog d;
-    d.Execute( {"CaesarCipher", "-k", "0", "--text", "HELLOWORLD", "-s" } );
-    d.Execute( {"CaesarCipher", "-k", "1", "--text", "HELLOWORLD", "-s" } );
-    d.Execute( {"CaesarCipher", "-k", "2", "--text", "HELLOWORLD", "-s" } );
-    d.Execute( {"CaesarCipher", "-k", "123", "--cipher", "HELLOWORLD", "-s" } );
-  }
-}
-#endif

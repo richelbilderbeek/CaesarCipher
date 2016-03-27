@@ -74,17 +74,3 @@ void ribi::QtCaesarCipherMenuDialog::on_button_start_clicked() noexcept
   QtCaesarCipherMainDialog d;
   ShowChild(&d);
 }
-
-#ifndef NDEBUG
-void ribi::QtCaesarCipherMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  CaesarCipherMenuDialog();
-  QtCaesarCipherMainDialog();
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif
