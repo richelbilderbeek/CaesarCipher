@@ -38,9 +38,6 @@ ribi::QtCaesarCipherMenuDialog::QtCaesarCipherMenuDialog(QWidget *parent) noexce
     QtHideAndShowDialog(parent),
     ui(new Ui::QtCaesarCipherMenuDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 }
 

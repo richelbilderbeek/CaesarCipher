@@ -4,8 +4,8 @@ include(../RibiLibraries/Boost.pri)
 include(../RibiLibraries/GeneralConsole.pri)
 include(../RibiLibraries/GeneralDesktop.pri)
 
-include(../RibiClasses/CppCaesarCipher/CppCaesarCipher.pri)
-include(../RibiClasses/CppCaesarCipher/CppCaesarCipherTest.pri)
+include(CppCaesarCipher.pri)
+include(CppCaesarCipherTest.pri)
 
 include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
 

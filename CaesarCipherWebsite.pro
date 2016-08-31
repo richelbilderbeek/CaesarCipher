@@ -5,7 +5,7 @@ include(../RibiLibraries/GeneralConsole.pri)
 include(../RibiLibraries/GeneralWeb.pri)
 
 
-include(../RibiClasses/CppCaesarCipher/CppCaesarCipher.pri)
+include(CppCaesarCipher.pri)
 include(../RibiClasses/CppLoopReader/CppLoopReader.pri)
 include(CaesarCipherWebsite.pri)
 
