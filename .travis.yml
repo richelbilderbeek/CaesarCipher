@@ -8,6 +8,7 @@ before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
   - sudo pip install codecov
+  - ./install_oclint.sh
 
 install: 
   - sudo apt-get install -qq g++-5
@@ -29,11 +30,15 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
- - ./download_other_githubs.sh
- - ./build_other_githubs.sh
- - ./build_desktop_test.sh
- - ./get_code_cov.sh
- - codecov
- - ./clean.sh # Now build without -gcov
- - ./build_desktop.sh
- - ./build_console.sh
+  - ./download_other_githubs.sh
+  - ./build_other_githubs.sh
+  - ./build_desktop_test.sh
+  - ./get_code_cov.sh
+  - codecov
+  - ./clean.sh # Now build without -gcov
+  - ./build_desktop.sh
+  - ./build_console.sh
+  - ./do_oclint.sh
+
+after_success: 
+  - bash <(curl -s https://codecov.io/bash)
