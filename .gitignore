@@ -33,3 +33,5 @@ Makefile*
 object_script*
 ui_*
 release/
+
+site/
