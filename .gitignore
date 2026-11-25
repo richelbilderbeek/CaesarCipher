@@ -35,3 +35,7 @@ ui_*
 release/
 
 site/
+
+wordlist.dic
+
+coverage/
