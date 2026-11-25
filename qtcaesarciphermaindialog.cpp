@@ -36,7 +36,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "trace.h"
 #include "ui_qtcaesarciphermaindialog.h"
 #include "caesarciphermaindialog.h"
-#include "testtimer.h"
 #pragma GCC diagnostic pop
 
 ribi::QtCaesarCipherMainDialog::QtCaesarCipherMainDialog(QWidget *parent) noexcept

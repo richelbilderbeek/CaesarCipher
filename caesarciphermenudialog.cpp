@@ -30,7 +30,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "loopreader.h"
 #include "caesarcipher.h"
 #include "caesarciphermaindialog.h"
-#include "testtimer.h"
 #include "trace.h"
 #pragma GCC diagnostic pop
 
@@ -116,7 +115,6 @@ ribi::About ribi::CaesarCipherMenuDialog::GetAbout() const noexcept
     GetVersionHistory());
   a.AddLibrary("CaesarCipher version: " + CaesarCipher::GetVersion());
   a.AddLibrary("LoopReader version: " + LoopReader<int>::GetVersion());
-  a.AddLibrary("TestTimer version: " + TestTimer::GetVersion());
   a.AddLibrary("Trace version: " + Trace::GetVersion());
   return a;
 }
