@@ -1,14 +1,10 @@
 # CaesarCipher
 
+[![Codecov](https://codecov.io/gh/richelbilderbeek/CaesarCipher/branch/main/graph/badge.svg)](https://codecov.io/gh/richelbilderbeek/CaesarCipher)
+
 [Go to the nicely rendered website](https://richelbilderbeek.github.io/CaesarCipher/).
 
-[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
-![Whitespace](Whitespace.png)
-[![Codecov logo](Codecov.png)](https://www.codecov.io)
 [![gplv3](http://www.gnu.org/graphics/gplv3-88x31.png)](http://www.gnu.org/licenses/gpl.html)
-
-[![Build Status](https://travis-ci.org/richelbilderbeek/CaesarCipher.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CaesarCipher)
-[![codecov.io](https://codecov.io/github/richelbilderbeek/CaesarCipher/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/CaesarCipher?branch=master)
 
 Tool to perform a Caesar cipher, written in C++ using Qt and Wt.
 
